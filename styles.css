@@ -1,0 +1,116 @@
+
+/* Reset
+----------------------------------------------------*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+:focus { outline: 0; }
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+table { border-collapse: collapse; border-spacing: 0; }
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+small { font-size: 85%; }
+
+/* self clear */
+.clearself:before, .clearself:after { content:" "; display:block; height:0; overflow:hidden; }
+.clearself:after { clear:both; }
+.clearself { zoom:1; } /* IE < 8 */
+
+/* Content
+----------------------------------------------------*/
+body {
+	display: none;
+	text-align: center;
+	font-family: Helvetica, Arial, sans-serif;
+}
+header{
+	margin: 2em;
+}
+h1 {
+	font-size: 3em;
+	margin: .25em;
+}
+p{
+	line-height: 1.5em;
+}
+#container {
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+	position: relative;
+}
+.item {
+	position: relative;
+	width: 31%;
+	/* max-height: 31%; to make this work in IE < 10 but then it fails in safari and webkit */
+	margin: 5px;
+}
+.item.over {
+	opacity: .75;
+}
+.clone {
+	position: absolute;
+
+}
+
+/* Media Queries
+----------------------------------------------------*/
+@media only screen and (max-width :480px) {
+	h1 {
+		font-size: 2em;
+	}
+	p {
+		margin: 0 auto;
+		font-size: 14px;
+		width: 75%;
+	}
+}
+
+/* open browser animation */
+.item    ul:first-child li                 a { opacity:1; -webkit-animation-duration:.8s; -moz-animation-duration:.8s; -o-animation-duration:.8s; animation-duration:.8s; }
+.productbrowser.pb-open    ul:first-child li:nth-child(1)    a { -webkit-animation-name:open-1; -moz-animation-name:open-1; -o-animation-name:open-1; animation-name:open-1; }
+.productbrowser.pb-open    ul:first-child li:nth-child(2)    a { -webkit-animation-name:open-2; -moz-animation-name:open-2; -o-animation-name:open-2; animation-name:open-2; }
+.productbrowser.pb-open    ul:first-child li:nth-child(3)    a { -webkit-animation-name:open-3; -moz-animation-name:open-3; -o-animation-name:open-3; animation-name:open-3; }
+.productbrowser.pb-open    ul:first-child li:nth-child(4)    a { -webkit-animation-name:open-4; -moz-animation-name:open-4; -o-animation-name:open-4; animation-name:open-4; }
+.productbrowser.pb-open    ul:first-child li:nth-child(5)    a { -webkit-animation-name:open-5; -moz-animation-name:open-5; -o-animation-name:open-5; animation-name:open-5; }
+.productbrowser.pb-open    ul:first-child li:nth-child(6)    a { -webkit-animation-name:open-6; -moz-animation-name:open-6; -o-animation-name:open-6; animation-name:open-6; }
+.productbrowser.pb-open    ul:first-child li:nth-child(7)    a { -webkit-animation-name:open-7; -moz-animation-name:open-7; -o-animation-name:open-7; animation-name:open-7; }
+.productbrowser.pb-open    ul:first-child li:nth-child(8)    a { -webkit-animation-name:open-8; -moz-animation-name:open-8; -o-animation-name:open-8; animation-name:open-8; }
+.productbrowser.pb-open    ul:first-child li:nth-child(9)    a { -webkit-animation-name:open-8; -moz-animation-name:open-8; -o-animation-name:open-8; animation-name:open-8; }
+.productbrowser.pb-opened  ul:first-child li                 a { opacity:1; }
+
+
+/* Animations
+----------------------------------------------------*/
+@-webkit-keyframes open-6 {
+	from { opacity:0; -webkit-transform:translate3d( -235px, -145px, 0); }
+	25%  { opacity:1; -webkit-transform:translate3d( 0, 0, 0); }
+	30%  { opacity:1; -webkit-transform:translate3d( 9.3px, 4.1px, 0); }
+	35%  { opacity:1; -webkit-transform:translate3d( 6.1px, 2.7px, 0); }
+	40%  { opacity:1; -webkit-transform:translate3d( 0, 0, 0); }
+	45%  { opacity:1; -webkit-transform:translate3d( -2.7px, -1.2px, 0); }
+	50%  { opacity:1; -webkit-transform:translate3d( -1.7px, -0.8px, 0); }
+	55%  { opacity:1; -webkit-transform:translate3d( 0, 0, 0); }
+	60%  { opacity:1; -webkit-transform:translate3d( 0.8px, 0.3px, 0); }
+	65%  { opacity:1; -webkit-transform:translate3d( 0.5px, 0.2px, 0); }
+	70%  { opacity:1; -webkit-transform:translate3d( 0, 0, 0); }
+	75%  { opacity:1; -webkit-transform:translate3d( -0.2px, -0.1px, 0); }
+	80%  { opacity:1; -webkit-transform:translate3d( -0.1px, -0.1px, 0); }
+	85%  { opacity:1; -webkit-transform:translate3d( 0, 0, 0); }
+	90%  { opacity:1; -webkit-transform:translate3d( 0.1px, 0, 0); }
+	95%  { opacity:1; -webkit-transform:translate3d( 0.1px, 0, 0); }
+	to   { opacity:1; -webkit-transform:translate3d( 0, 0, 0); }
+}
