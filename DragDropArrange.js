@@ -17,7 +17,7 @@
 		BALT = {};
 	};
 
-	imageFilenames = ["strawberry.jpg", "flower-1.jpg", "flower-2.jpg", "flower-3.jpg", "lightbulbs.jpg", "frog.jpg", "squirrel.jpg", "spider.jpg", "bush.jpg"]
+	imageFilenames = ["strawberry.jpg", "flower-1.jpg", "flower-2.jpg", "flower-3.jpg", "lightbulbs.jpg", "frog.jpg", "squirrel.jpg", "twirl.jpg", "bush.jpg"]
 
 	// DragDropArrange
 	BALT.DragDropArrange = function()
